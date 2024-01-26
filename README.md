@@ -1,3 +1,3 @@
 # Resume
 
-Resume of BulletTech: https://bullettech2021.github.io/Resume/home/
+Resume of BulletTech: https://daoqing.github.io/Resume-main/home/
