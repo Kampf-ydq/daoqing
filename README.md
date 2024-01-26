@@ -1,3 +1,3 @@
 # Resume
 
-Resume of BulletTech: https://daoqing.github.io/Resume-main/home/
+Resume of Daoqing Yang: https://kampf-ydq.github.io/daoqing/home/
