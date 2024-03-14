@@ -9,6 +9,8 @@ import pandas as pd
 from utils.flow_utils import preprocess_flow, generate_ts_datasets, get_value_from_partial_key, \
     code_method
 
+# This is an example of pattern series construction for the EtherNet/IP protocol
+
 with open("./datasets_preprocessing/datasets/swat/cip_flow_ot_0.01.json", encoding='utf-8') as f:
 # with open("./datasets_preprocessing/datasets/ctf/cip_flow_ot_0.01.json", encoding='utf-8') as f:  # SWAT
     # with open("CIP.json", encoding='utf-8') as f: # CTF
