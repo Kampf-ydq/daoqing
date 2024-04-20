@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="user@219.216.64.120:22 password (5)" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="user@219.216.64.120:22 password (10)" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
       <paths name="user@219.216.64.120:22 password">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="user@219.216.64.120:22 password (10)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/user/Documents/ydqWorkspace/patty_public" local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
       </paths>
@@ -45,6 +52,20 @@
         </serverdata>
       </paths>
       <paths name="user@219.216.64.120:22 password (7)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="user@219.216.64.120:22 password (8)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="user@219.216.64.120:22 password (9)">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

@@ -8,7 +8,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 import math
 import numpy as np
-from models.Flowformer import FlowformerClassiregressor
+
+from CNNFCN_PatternSeries.models.SemanticAnalyzer import PSClassiregressor
 
 
 def model_factory(config, data):
@@ -26,8 +27,8 @@ def model_factory(config, data):
 
     if (task == "classification") or (task == "regression"):
         num_labels = len(data.class_names) if task == "classification" else data.labels_df.shape[1]
-        if config['model'] == 'flowformer':
-            return FlowformerClassiregressor(feat_dim, max_seq_len, config['d_model'],
+        if config['model'] == 'psclassify':
+            return PSClassiregressor(feat_dim, max_seq_len, config['d_model'],
                                              config['num_heads'],
                                              config['num_layers'], config['dim_feedforward'],
                                              num_classes=num_labels,

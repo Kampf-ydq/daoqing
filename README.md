@@ -1,11 +1,20 @@
 
-# SemanticAnalysis
-For public sec24 meeting codes. The overall framework of our approach is shown in Figure 1.
+# Patty
+Patty is a framework for reverse engineering the semantics of ICPs fields. 
+It infers the unknown from the known, preprocesses network messages of known protocols,
+extracts field pattern series (similar to time series), trains a semantic classifier, and then predicts unknown ICPs.
+The overall framework of Patty is shown in Figure 1.
 <p align="center">
 <img src=".\pic\framework.png" height = "300" alt="" align=center />
 <br><br>
-<b>Figure 1.</b> Field pattern-series construction process.
+<b>Figure 1.</b> The overview of Patty.
 </p>
+
+# Installation
+- Install dependencies (python 3.9 or higher):
+```
+$ pip install -r requirements.txt
+```
 
 # Usage
 - **(1) Parsing messages with Honeyeye.**
@@ -29,14 +38,22 @@ Take the EtherNet/IP protocol as an example. The specific process is shown in th
 2. The model run script is:
 	- TRAIN:
 	```python
-    --output_dir ./experiments --comment "classification for flowformer" --name ModbusTcp_fromScratch --records_file Classification_records.xls --data_dir ./Multivariate_ts/ModbusTcp --data_class tsra --pattern TRAIN --val_pattern TEST --epochs 100 --lr 0.001 --batch_size 16 --optimizer RAdam --pos_encoding learnable --task classification --key_metric accuracy.
+    --output_dir ./experiments --comment "classification for field semantic" --name ModbusTcp_fromScratch --records_file Classification_records.xls --data_dir ./Multivariate_ts/ModbusTcp --data_class tsra --pattern TRAIN --val_pattern TEST --epochs 100 --lr 0.001 --batch_size 16 --optimizer RAdam --pos_encoding learnable --task classification --key_metric accuracy.
 	```
 
 	- TEST:
 	```python
-    --output_dir ./experiments --comment "classification for flowformer" --name ModbusTcp_fromScratch --records_file Classification_records.xls --data_dir ./Multivariate_ts/ModbusTcp --data_class tsra --pattern TRAIN --val_pattern TEST --epochs 100 --lr 0.001 --batch_size 16 --optimizer RAdam --pos_encoding learnable --task classification --key_metric accuracy --test_only testset.
+    --output_dir ./experiments --comment "classification for field semantic" --name ModbusTcp_fromScratch --records_file Classification_records.xls --data_dir ./Multivariate_ts/ModbusTcp --data_class tsra --pattern TRAIN --val_pattern TEST --epochs 100 --lr 0.001 --batch_size 16 --optimizer RAdam --pos_encoding learnable --task classification --key_metric accuracy --test_only testset.
 	```
+ 
+    - Arguments: </br>
+    	- `--output_dir`: the filepath of input trace (required)</br>
+        - `--records_file`: The location where each indicator value of each training result is saved</br>
+    	- `--data_dir`: Constructed field pattern sequence data (`.ts`)</br>
+        - `--pattern`: Control the mode of the model: training or validation</br>
+        - `--test_only`: This parameter takes effect during testing</br>
+        
 
 ## Contact
 
-If you have any questions or want to use the code, please contact 2210733@stu.neu.edu.cn.
+If you have any questions or want to use the code, please contact us.

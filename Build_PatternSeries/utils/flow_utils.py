@@ -1,9 +1,11 @@
-from collections import Counter
-import numpy as np
-
+# Copyright (C) 2024
 # This file includes the following functions:
 #   1.constructing a pattern series for each type of field;
 #   2.processing flows
+
+from collections import Counter
+import numpy as np
+
 # dictionary -> dict {}, partial_key -> str ""
 def get_value_from_partial_key(dictionary, partial_key):
     for key in dictionary:

@@ -1,3 +1,7 @@
+# Copyright (C) 2024
+# Various loss functions have been rewritten in this file
+
+
 import torch
 import torch.nn as nn
 from torch.nn import functional as F
